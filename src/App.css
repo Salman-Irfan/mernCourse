@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.container{
+  width: 75% !important;
+}
+
+.card{
+  width: 32.2% !important;
+}
