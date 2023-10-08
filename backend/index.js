@@ -20,8 +20,8 @@ app.get("/api/v1/contact", (req, res) => {
 
 app.use('/api/v1/', require('./routes/notesRoutes/notesRoute'))
 
-const LOCAL_IP = "10.50.75.24" // env
+// const LOCAL_IP = "10.50.75.24" // env
 
-app.listen(PORT, LOCAL_IP, () => {
-    console.log(`Example app listening on the port ${LOCAL_IP}:${PORT}`);
+app.listen(PORT, () => {
+    console.log(`Example app listening on the http://localhost:${PORT}`);
 });
