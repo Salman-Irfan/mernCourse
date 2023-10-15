@@ -17,8 +17,10 @@ app.get("/api/v1/contact", (req, res) => {
 });
 
 // available routes
+// app.use('/api/v1/', require('./routes/notesRoutes/notesRoute'))
+app.use('/', require('./routes'));
 
-app.use('/api/v1/', require('./routes/notesRoutes/notesRoute'))
+
 
 // const LOCAL_IP = "10.50.75.24" // env
 

@@ -1,8 +1,13 @@
 const express = require("express");
 const router = express.Router();
 const { body } = require("express-validator");
-const createNotesController = require("../../controllers/notesControllers/createNotesController");
+// mongoose model
 const Note = require("../../models/notesSchema/NoteModel"); 
+// controllers
+const createNotesController = require("../../controllers/notesControllers/createNotesController");
+const getAllNotesController = require("../../controllers/notesControllers/getAllNotesController");
+const updateNoteController = require("../../controllers/notesControllers/updateNoteController");
+const deleteNoteController = require("../../controllers/notesControllers/deleteNoteController");
 // taking input from user
 // create note route
 router.post(
@@ -13,9 +18,13 @@ router.post(
     ],
     createNotesController
 );
+// read note
+router.get("/notes", getAllNotesController);
 
-router.get("/notes", (req, res) => {
-    res.send("Hello From Node js Routes folder!");
-});
+// update note route
+router.put('/notes/:id', updateNoteController);
+
+// delete note route
+router.delete("/notes/:id", deleteNoteController);
 
 module.exports = router;
