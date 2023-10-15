@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import BASE_URL from "../constants/secretes/baseUrl"
+import addNoteApiService from "../services/apiServices/notesApis/addNoteApi";
 
 
 
@@ -44,11 +45,20 @@ const AddNote = () => {
         try {
             // Send a POST request to the specified URL
             // base url = http://192.168.100.9:8000/api/v1
-            let notesEndpoint = "/notes";
-            const response = await axios.post(`${BASE_URL}${notesEndpoint}`, addFormData);
+            // let notesEndpoint = "/notes";
+            // const response = await axios.post(`${BASE_URL}${notesEndpoint}`, addFormData);
             // Handle the response here (e.g., display a success message)
-            console.log("Note added successfully!");
-            console.log("Server response:", response.data);
+            // console.log("Note added successfully!");
+            // console.log("Server response:", response.data);
+            // setNote({
+            //     title: "",
+            //     description: "",
+            //     tags: [],
+            //     newTag: ""
+            // });
+
+            // week 5 updation - node crud topic
+            const response = await addNoteApiService(addFormData);
             setNote({
                 title: "",
                 description: "",

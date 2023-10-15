@@ -1,11 +1,11 @@
 import React from 'react'
 import Navbar from './layouts/Navbar'
 import { Route, Routes } from 'react-router-dom'
-import Home from './views/Home'
-import AllNotes from './views/AllNotes'
-import AddNote from './views/AddNote'
-import About from './views/About'
-import Contact from './views/Contact'
+import Home from './pages/Home'
+import AllNotes from './pages/AllNotes'
+import AddNote from './pages/AddNote'
+import About from './pages/About'
+import Contact from './pages/Contact'
 import Footer from './layouts/Footer'
 
 const App = () => {
