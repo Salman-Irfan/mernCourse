@@ -10,7 +10,7 @@ const app = express();
 // Middleware to parse JSON data from requests
 app.use(express.json());
 app.use(cors())
-const PORT = process.env.PORT ;
+const PORT = process.env.PORT;
 // default route
 app.get("/api/v1/contact", (req, res) => {
     res.send("Hello From Node js server!");

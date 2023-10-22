@@ -8,6 +8,7 @@ const createNotesController = require("../../controllers/notesControllers/create
 const getAllNotesController = require("../../controllers/notesControllers/getAllNotesController");
 const updateNoteController = require("../../controllers/notesControllers/updateNoteController");
 const deleteNoteController = require("../../controllers/notesControllers/deleteNoteController");
+const getNoteByIdController = require("../../controllers/notesControllers/getNoteByIdController");
 // taking input from user
 // create note route
 router.post(
@@ -26,5 +27,8 @@ router.put('/notes/:id', updateNoteController);
 
 // delete note route
 router.delete("/notes/:id", deleteNoteController);
+
+// get note by id
+router.get("/note/:id", getNoteByIdController);
 
 module.exports = router;

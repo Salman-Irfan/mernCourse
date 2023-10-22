@@ -7,11 +7,12 @@ import AddNote from './pages/AddNote'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Footer from './layouts/Footer'
+import UpdateNote from './pages/UpdateNote'
 
 const App = () => {
   return (
     <>
-      <Navbar />
+      <Navbar title="Mern Course" />
       {/* define routes */}
       <Routes>
         {/* home route */}
@@ -24,6 +25,8 @@ const App = () => {
         <Route path='/about' element={<About />} />
         {/* contact */}
         <Route path='/contact' element={<Contact />} />
+        {/* dynamic update note */}
+        <Route path="notes/update/:noteId" element={<UpdateNote />} />
       </Routes>
       {/* footer */}
       <Footer/>
