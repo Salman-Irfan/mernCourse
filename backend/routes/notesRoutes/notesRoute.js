@@ -9,6 +9,7 @@ const getAllNotesController = require("../../controllers/notesControllers/getAll
 const updateNoteController = require("../../controllers/notesControllers/updateNoteController");
 const deleteNoteController = require("../../controllers/notesControllers/deleteNoteController");
 const getNoteByIdController = require("../../controllers/notesControllers/getNoteByIdController");
+const requireSignIn = require("../../middlewares/authMiddleware");
 // taking input from user
 // create note route
 router.post(
@@ -20,7 +21,9 @@ router.post(
     createNotesController
 );
 // read note
-router.get("/notes", getAllNotesController);
+
+// requireSignIn
+router.get("/notes", requireSignIn,  getAllNotesController);
 
 // update note route
 router.put('/notes/:id', updateNoteController);

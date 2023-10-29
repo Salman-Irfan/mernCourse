@@ -9,6 +9,11 @@ const app = express();
 
 // Middleware to parse JSON data from requests
 app.use(express.json());
+// add middleware to parse form data instead of JSON
+app.use(express.urlencoded({ extended: true }));
+// use a static folder
+app.use(express.static('public'))
+
 app.use(cors())
 const PORT = process.env.PORT;
 // default route
