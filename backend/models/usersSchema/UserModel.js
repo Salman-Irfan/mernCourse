@@ -17,16 +17,20 @@ const UserSchema = new Schema({
         required: true,
     },
     dob: {
-        type: Date
+        type: Date,
+        default: Date.now(),
     },
     phoneNumber: {
         type: String,
+        default: "+923324713797"
     },
     country: {
-        type: String
+        type: String,
+        default: "PK"
     },
     gender: {
         type: String,
+        default: "male"
     },
     interests: {
         type: Array,
@@ -42,9 +46,11 @@ const UserSchema = new Schema({
     },
     experience: {
         type: Number,
+        default: 0,
     },
     profileImage: {
         type: String,
+        
     }
 
 });
