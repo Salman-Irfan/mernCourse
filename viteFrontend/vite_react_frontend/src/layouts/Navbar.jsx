@@ -57,6 +57,18 @@ const Navbar = (props) => {
                                 ) : (
                                     // If authtoken doesn't exist, display the Login and Register buttons
                                     <>
+                                    {/* admin login */}
+                                            <li>
+                                                <Link
+                                                    className={`nav-link `}
+                                                    to="/auth/admin-login"
+                                                >
+                                                    <button className="me-2 btn btn-warning">
+                                                        Admin Login
+                                                    </button>
+                                                </Link>
+                                            </li>
+                                    {/* login */}
                                         <li>
                                             <Link
                                                 className={`nav-link `}
@@ -67,6 +79,7 @@ const Navbar = (props) => {
                                                 </button>
                                             </Link>
                                         </li>
+                                        {/* register */}
                                         <li>
                                             <Link
                                                 className={`nav-link `}

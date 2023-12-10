@@ -10,6 +10,8 @@ import Footer from './layouts/Footer'
 import UpdateNote from './pages/UpdateNote'
 import Register from './pages/auth/Register'
 import Login from './pages/auth/Login'
+import AdminLogin from './pages/auth/AdminLogin'
+import AdminDashboard from './pages/admin/AdminDashboard'
 
 const App = () => {
   return (
@@ -34,6 +36,11 @@ const App = () => {
         <Route path='/auth/register' element={<Register />} />
         {/* login route */}
         <Route path='/auth/login' element={<Login />} />
+        {/* admin login */}
+        <Route path='/auth/admin-login' element={<AdminLogin />} />
+
+        {/* admin dashboard */}
+        <Route path='/admin-dashboard' element={<AdminDashboard />} />
       </Routes>
       {/* footer */}
       <Footer/>

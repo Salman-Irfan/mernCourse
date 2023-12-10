@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const EditNote = ({ note, onSave, onCancel }) => {
+const EditNote = ({ note, onSave, onCancel }) => { // props destructuring, just similar with object destructuring
     const [editedTitle, setEditedTitle] = useState(note.title);
     const [editedDescription, setEditedDescription] = useState(note.description);
 

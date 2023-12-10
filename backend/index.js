@@ -27,7 +27,7 @@ app.use('/', require('./routes'));
 
 
 
-// const LOCAL_IP = "10.50.75.24" // env
+const LOCAL_IP = "192.168.100.9"
 
 app.listen(PORT, () => {
     console.log(`Example app listening on the http://localhost:${PORT}`);

@@ -23,7 +23,7 @@ router.post(
 // read note
 
 // requireSignIn
-router.get("/notes",  getAllNotesController);
+router.get("/notes",   getAllNotesController);
 
 // update note route
 router.put('/notes/:id', updateNoteController);
